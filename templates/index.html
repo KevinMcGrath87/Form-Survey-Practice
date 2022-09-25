@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href = "{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <div class = 'world'>
+        <div class = 'rect'>
+            <div id='title'>DOJO SURVEY</div>
+            <form class = 'survey' action = '/result', method = 'post'>
+                <label class = 'labels' for = 'name'>Your Name</label>
+                <input class = 'inputText' type = 'text' name = 'name' id = 'name' value = 'Your Name'>
+                <label class = 'labels' for = 'dojos'>Your Dojo</label>
+                <select class = 'inputText' name = 'dojo' id = 'dojos' value="------">
+                    <option value = "Tohkon Judo Academy">Tohkon Judo Academy</option>
+                    <option value = "Kokushi Budo ">Kokushi Budo</option>
+                    <option value = "Coens">Coens</option>
+                </select>
+                <label class = 'labels' for = 'techniques'>Favorite Technique</label>
+                <select class = 'inputText' name = 'technique' id="techniques" value="------">
+                    <option value = "Harai Goshi">Harai Goshi</option>
+                    <option value = "Uchi Mata ">Uchi Mata</option>
+                    <option value = "Osoto Gari">Osoto Gari</option>
+                </select>
+                <label for ='description' class = 'labels'>Self Description</label>
+                <input type = "text" class = "inputText" id = 'description' name = "description" value ="Tell us about yourself">
+                <input type = 'submit' value = 'submit' class='inputText'>
+                <!-- <button class = 'inputText' type = "submit">submit info</button> -->
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+</html>
